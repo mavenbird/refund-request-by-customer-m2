@@ -2,7 +2,7 @@
     "name": "mavenbird/refund-request",
     "description": "Mavenbird Refund Request Module",
     "type": "magento2-module",
-    "version": "1.1.1",
+    "version": "1.2.1",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
