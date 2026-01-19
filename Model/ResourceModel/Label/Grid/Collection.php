@@ -86,8 +86,8 @@ class Collection extends ResourceModel\Label\Collection implements SearchResultI
         $eventObject,
         $resourceModel,
         $model = Document::class,
-        \Magento\Framework\DB\Adapter\AdapterInterface $connection = null,
-        AbstractDb $resource = null
+        ?\Magento\Framework\DB\Adapter\AdapterInterface $connection = null,
+        ?AbstractDb $resource = null
     ) {
         parent::__construct($entityFactory, $logger, $fetchStrategy, $eventManager, $connection, $resource);
         $this->eventPrefix = $eventPrefix;
@@ -139,10 +139,10 @@ class Collection extends ResourceModel\Label\Collection implements SearchResultI
     /**
      * Set search criteria.
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
-     * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
+     * @param ?\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
      * @return $this
      */
-    public function setSearchCriteria(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria = null)
+    public function setSearchCriteria(?\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria = null)
     {
         return $this;
     }
@@ -174,7 +174,7 @@ class Collection extends ResourceModel\Label\Collection implements SearchResultI
      * @param \Magento\Framework\Api\ExtensibleDataInterface[] $items
      * @return $this
      */
-    public function setItems(array $items = null)
+    public function setItems(?array $items = null)
     {
         return $this;
     }
